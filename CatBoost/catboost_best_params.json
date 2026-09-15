@@ -1,0 +1,1 @@
+{"learning_rate": 0.07246421689500382, "depth": 4, "l2_leaf_reg": 1.8689472746239991e-07, "random_strength": 1.1788386414059152e-07, "bagging_temperature": 0.5485921956539299, "border_count": 230, "loss_function": "Logloss", "eval_metric": "AUC", "auto_class_weights": "Balanced", "verbose": false}
