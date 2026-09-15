@@ -1,0 +1,1 @@
+{"learning_rate": 0.081548291152698, "max_depth": 3, "min_child_weight": 5, "subsample": 0.9584920067337729, "colsample_bytree": 0.5279706274071247, "reg_alpha": 0.21361143706392352, "reg_lambda": 3.163023837161417e-08, "objective": "binary:logistic", "eval_metric": "auc", "tree_method": "hist", "scale_pos_weight": 4.72590106097843}
