@@ -1,0 +1,53 @@
+{
+  "global_seed": 20260915,
+  "tuning_folds": 3,
+  "final_folds": 10,
+  "inner_target_encoding_folds": 5,
+  "n_trials_requested_this_run": 60,
+  "best_tuning_auc": 0.9452671228353416,
+  "best_search_params": {
+    "grow_policy": "depthwise",
+    "learning_rate": 0.01458820909879117,
+    "min_child_weight": 7.145819974277341,
+    "subsample": 0.8161122639088659,
+    "colsample_bytree": 0.5787250080114758,
+    "colsample_bynode": 0.7661878820964553,
+    "reg_alpha": 0.0005152502016929811,
+    "reg_lambda": 4.66322803269432,
+    "gamma": 0.01618580400419477,
+    "max_delta_step": 4,
+    "scale_pos_weight": 1.4793985096936029,
+    "max_depth": 4
+  },
+  "member_oof_auc": {
+    "tuned_direct": 0.9456775509114429,
+    "conservative_direct": 0.9456497539871669,
+    "recipe_residual": 0.9457221956011662
+  },
+  "probability_blend_auc": 0.9457334749839031,
+  "probability_weights": {
+    "tuned_direct": 0.275,
+    "conservative_direct": 0.0,
+    "recipe_residual": 0.725
+  },
+  "rank_blend_auc": 0.9457339609518487,
+  "rank_weights": {
+    "tuned_direct": 0.3,
+    "conservative_direct": 0.025,
+    "recipe_residual": 0.675
+  },
+  "chosen_method": "rank",
+  "chosen_weights": {
+    "tuned_direct": 0.3,
+    "conservative_direct": 0.025,
+    "recipe_residual": 0.675
+  },
+  "chosen_oof_auc": 0.9457339609518487,
+  "versions": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "xgboost": "3.4.1",
+    "optuna": "5.0.0"
+  }
+}
