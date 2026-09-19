@@ -1,0 +1,73 @@
+{
+  "fingerprint": "d0ef7dd4db72cd699d4b5d6e63ccba5037d37c875988e5e67f3f4d4f975cfa38",
+  "comparison": "Paired OOF deltas against the full single-model reference; positive is better.",
+  "summary": [
+    {
+      "experiment": "no_ratios_charging",
+      "mean_repeat_oof_auc": 0.9456955599339143,
+      "delta_vs_reference": 5.817142594843894e-06,
+      "worst_repeat_delta": 5.262783039583496e-06,
+      "best_repeat_delta": 6.371502150104291e-06,
+      "mean_fold_delta": 5.652829441843421e-06,
+      "fold_delta_std_descriptive": 4.0804113856921684e-05,
+      "folds_better_than_reference": 11,
+      "total_folds": 20,
+      "n_features": 193,
+      "mean_best_trees": 2665.15,
+      "fits_reaching_round_limit": 0,
+      "total_fit_minutes": 47.0432968934667,
+      "repeat_averaged_oof_auc": 0.9458045954850429
+    },
+    {
+      "experiment": "full_reference",
+      "mean_repeat_oof_auc": 0.9456897427913195,
+      "delta_vs_reference": 0.0,
+      "worst_repeat_delta": 0.0,
+      "best_repeat_delta": 0.0,
+      "mean_fold_delta": 0.0,
+      "fold_delta_std_descriptive": 0.0,
+      "folds_better_than_reference": 0,
+      "total_folds": 20,
+      "n_features": 205,
+      "mean_best_trees": 2744.05,
+      "fits_reaching_round_limit": 0,
+      "total_fit_minutes": 49.91259843176666,
+      "repeat_averaged_oof_auc": 0.9457967150151828
+    }
+  ],
+  "repeat_metrics": [
+    {
+      "experiment": "full_reference",
+      "repeat": 1,
+      "split_seed": 20260932,
+      "oof_auc": 0.9457221956011662,
+      "reference_oof_auc": 0.9457221956011662,
+      "delta_vs_reference": 0.0
+    },
+    {
+      "experiment": "full_reference",
+      "repeat": 2,
+      "split_seed": 20261932,
+      "oof_auc": 0.9456572899814727,
+      "reference_oof_auc": 0.9456572899814727,
+      "delta_vs_reference": 0.0
+    },
+    {
+      "experiment": "no_ratios_charging",
+      "repeat": 1,
+      "split_seed": 20260932,
+      "oof_auc": 0.9457274583842058,
+      "reference_oof_auc": 0.9457221956011662,
+      "delta_vs_reference": 5.262783039583496e-06
+    },
+    {
+      "experiment": "no_ratios_charging",
+      "repeat": 2,
+      "split_seed": 20261932,
+      "oof_auc": 0.9456636614836228,
+      "reference_oof_auc": 0.9456572899814727,
+      "delta_vs_reference": 6.371502150104291e-06
+    }
+  ],
+  "not_an_untouched_holdout": true
+}

@@ -1,0 +1,10 @@
+{
+  "competition": "playground-series-s6e9",
+  "experiment": "no_ratios_charging",
+  "run_directory": "XGBoost/challenger/outputs/157cd35ebfd96f73",
+  "submission_file": "XGBoost/challenger/submission_xgboost_no_ratios_charging.csv",
+  "submission_sha256": "40491d5de4744315ec6d881eeae02916e31aa4a6766dadaf3a52d53973260a99",
+  "public_auc": 0.94583,
+  "public_score_source": "Reported by the project owner in conversation on 2026-09-19; not independently verified through Kaggle.",
+  "repeat_averaged_oof_auc": 0.9458045954850429
+}

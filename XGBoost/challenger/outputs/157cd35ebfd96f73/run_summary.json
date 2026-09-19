@@ -1,0 +1,16 @@
+{
+  "fingerprint": "157cd35ebfd96f739f36b3979714fcc7ec7441c9d62aea2d2abd6696d4087335",
+  "experiment": "no_ratios_charging",
+  "mean_repeat_oof_auc": 0.9456955599339143,
+  "repeat_averaged_oof_auc": 0.9458045954850429,
+  "expected_confirmation_repeat_averaged_oof_auc": 0.9458045954850429,
+  "completed_fits": 20,
+  "test_rows": 286571,
+  "fits_reaching_round_limit": 0,
+  "total_fit_minutes": 47.27351686401659,
+  "total_test_prediction_minutes": 0.7239883960832837,
+  "submission_sha256": "40491d5de4744315ec6d881eeae02916e31aa4a6766dadaf3a52d53973260a99",
+  "archived_submission": "XGBoost_Challenger/outputs/157cd35ebfd96f73/submission_xgboost_no_ratios_charging.csv",
+  "upload_file": "XGBoost_Challenger/submission_xgboost_no_ratios_charging.csv",
+  "note": "Local OOF scores are not leaderboard scores; this is not the historical three-family rank blend."
+}

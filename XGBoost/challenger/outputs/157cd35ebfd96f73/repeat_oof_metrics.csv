@@ -1,0 +1,3 @@
+experiment,repeat,split_seed,oof_auc
+no_ratios_charging,1,20260932,0.9457274583842058
+no_ratios_charging,2,20261932,0.9456636614836228

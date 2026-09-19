@@ -1,0 +1,361 @@
+{
+ "experiment": "no_ratios_charging",
+ "confirmation_run": "XGBoost_Ablation/outputs/confirm_d0ef7dd4db72cd69",
+ "confirmation_candidate_mean_repeat_oof_auc": 0.9456955599339143,
+ "confirmation_candidate_repeat_averaged_oof_auc": 0.9458045954850429,
+ "confirmation_manifest": {
+  "pipeline_version": "1.0.0",
+  "mode": "confirm",
+  "global_seed": 20260915,
+  "n_splits": 10,
+  "split_seeds": [
+   20260932,
+   20261932
+  ],
+  "inner_te_folds": 5,
+  "max_boost_rounds": 6000,
+  "early_stopping_rounds": 200,
+  "max_bin": 512,
+  "device": "cpu",
+  "nthread": -1,
+  "versions": {
+   "numpy": "2.5.2",
+   "pandas": "3.0.5",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.0",
+   "xgboost": "3.4.1"
+  },
+  "reference_search_params": {
+   "grow_policy": "depthwise",
+   "learning_rate": 0.01458820909879117,
+   "min_child_weight": 7.145819974277341,
+   "subsample": 0.8161122639088659,
+   "colsample_bytree": 0.5787250080114758,
+   "colsample_bynode": 0.7661878820964553,
+   "reg_alpha": 0.0005152502016929811,
+   "reg_lambda": 4.66322803269432,
+   "gamma": 0.01618580400419477,
+   "max_delta_step": 4,
+   "scale_pos_weight": 1,
+   "max_depth": 4
+  },
+  "experiments": {
+   "full_reference": {
+    "drop_groups": [],
+    "te_mode": "all",
+    "prior_scale": 1,
+    "smoothing_scale": 1,
+    "description": "All features, all TE, recipe prior; strongest single-model family."
+   },
+   "no_ratios_charging": {
+    "drop_groups": [
+     "ratios",
+     "charging"
+    ],
+    "te_mode": "all",
+    "prior_scale": 1,
+    "smoothing_scale": 1,
+    "description": "Remove ratios and charging helpers; raw station counts stay."
+   }
+  },
+  "feature_groups": {
+   "raw_numeric": [
+    "Age",
+    "Annual_Income_USD",
+    "Daily_Commute_km",
+    "Number_of_Cars_Owned",
+    "Charging_Stations_Near_Home",
+    "Charging_Stations_Near_Work",
+    "Environmental_Concern_Level"
+   ],
+   "binary_ordinal": [
+    "Subsidy_flag",
+    "Home_charging_flag",
+    "Range_anxiety_ordinal"
+   ],
+   "charging": [
+    "Total_charging_stations",
+    "Station_difference",
+    "Station_minimum",
+    "Station_maximum",
+    "Station_product",
+    "No_nearby_station",
+    "Either_station_zero",
+    "Home_access_score",
+    "Commute_per_station",
+    "Stations_per_commute"
+   ],
+   "ratios": [
+    "Income_per_commute",
+    "Income_per_car"
+   ],
+   "logs": [
+    "Log_income",
+    "Log_commute"
+   ],
+   "numeric_interactions": [
+    "Income_x_subsidy",
+    "Concern_x_subsidy",
+    "Concern_minus_anxiety",
+    "Commute_x_anxiety"
+   ],
+   "recipe_clues": [
+    "EV_recipe_score",
+    "EV_recipe_distance",
+    "EV_recipe_probability"
+   ],
+   "boundaries": [
+    "Annual_Income_USD_winsorized",
+    "Daily_Commute_km_winsorized",
+    "Income_at_floor",
+    "Commute_at_floor",
+    "Income_at_least_170k",
+    "Commute_at_least_80"
+   ],
+   "frequency": [
+    "Age_frequency",
+    "Annual_Income_USD_frequency",
+    "Daily_Commute_km_frequency",
+    "Number_of_Cars_Owned_frequency",
+    "Charging_Stations_Near_Home_frequency",
+    "Charging_Stations_Near_Work_frequency",
+    "Environmental_Concern_Level_frequency",
+    "Gender_frequency",
+    "City_Type_frequency",
+    "Current_Car_Type_frequency",
+    "Home_Charging_Possible_frequency",
+    "Subsidy_Available_frequency",
+    "Range_Anxiety_Level_frequency"
+   ],
+   "digits": [
+    "Income_digit_ones_0",
+    "Income_digit_ones_1",
+    "Income_digit_ones_2",
+    "Income_digit_ones_3",
+    "Income_digit_ones_4",
+    "Income_digit_ones_5",
+    "Income_digit_ones_6",
+    "Income_digit_ones_7",
+    "Income_digit_ones_8",
+    "Income_digit_ones_9",
+    "Income_digit_tens_0",
+    "Income_digit_tens_1",
+    "Income_digit_tens_2",
+    "Income_digit_tens_3",
+    "Income_digit_tens_4",
+    "Income_digit_tens_5",
+    "Income_digit_tens_6",
+    "Income_digit_tens_7",
+    "Income_digit_tens_8",
+    "Income_digit_tens_9",
+    "Income_digit_hundreds_0",
+    "Income_digit_hundreds_1",
+    "Income_digit_hundreds_2",
+    "Income_digit_hundreds_3",
+    "Income_digit_hundreds_4",
+    "Income_digit_hundreds_5",
+    "Income_digit_hundreds_6",
+    "Income_digit_hundreds_7",
+    "Income_digit_hundreds_8",
+    "Income_digit_hundreds_9",
+    "Income_digit_thousands_0",
+    "Income_digit_thousands_1",
+    "Income_digit_thousands_2",
+    "Income_digit_thousands_3",
+    "Income_digit_thousands_4",
+    "Income_digit_thousands_5",
+    "Income_digit_thousands_6",
+    "Income_digit_thousands_7",
+    "Income_digit_thousands_8",
+    "Income_digit_thousands_9",
+    "Income_digit_ten_thousands_0",
+    "Income_digit_ten_thousands_1",
+    "Income_digit_ten_thousands_2",
+    "Income_digit_ten_thousands_3",
+    "Income_digit_ten_thousands_4",
+    "Income_digit_ten_thousands_5",
+    "Income_digit_ten_thousands_6",
+    "Income_digit_ten_thousands_7",
+    "Income_digit_ten_thousands_8",
+    "Income_digit_ten_thousands_9",
+    "Income_digit_hundred_thousands_0",
+    "Income_digit_hundred_thousands_1",
+    "Commute_tenths_digit_0",
+    "Commute_tenths_digit_1",
+    "Commute_tenths_digit_2",
+    "Commute_tenths_digit_3",
+    "Commute_tenths_digit_4",
+    "Commute_tenths_digit_5",
+    "Commute_tenths_digit_6",
+    "Commute_tenths_digit_7",
+    "Commute_tenths_digit_8",
+    "Commute_tenths_digit_9",
+    "Commute_ones_digit_0",
+    "Commute_ones_digit_1",
+    "Commute_ones_digit_2",
+    "Commute_ones_digit_3",
+    "Commute_ones_digit_4",
+    "Commute_ones_digit_5",
+    "Commute_ones_digit_6",
+    "Commute_ones_digit_7",
+    "Commute_ones_digit_8",
+    "Commute_ones_digit_9",
+    "Commute_tens_digit_0",
+    "Commute_tens_digit_1",
+    "Commute_tens_digit_2",
+    "Commute_tens_digit_3",
+    "Commute_tens_digit_4",
+    "Commute_tens_digit_5",
+    "Commute_tens_digit_6",
+    "Commute_tens_digit_7",
+    "Commute_tens_digit_8",
+    "Commute_tens_digit_9",
+    "Age_ones_digit_0",
+    "Age_ones_digit_1",
+    "Age_ones_digit_2",
+    "Age_ones_digit_3",
+    "Age_ones_digit_4",
+    "Age_ones_digit_5",
+    "Age_ones_digit_6",
+    "Age_ones_digit_7",
+    "Age_ones_digit_8",
+    "Age_ones_digit_9"
+   ],
+   "category_interactions": [
+    "Subsidy_x_anxiety_No__High",
+    "Subsidy_x_anxiety_No__Low",
+    "Subsidy_x_anxiety_No__Medium",
+    "Subsidy_x_anxiety_Yes__High",
+    "Subsidy_x_anxiety_Yes__Low",
+    "Subsidy_x_anxiety_Yes__Medium",
+    "Subsidy_x_concern_No__1",
+    "Subsidy_x_concern_No__2",
+    "Subsidy_x_concern_No__3",
+    "Subsidy_x_concern_No__4",
+    "Subsidy_x_concern_No__5",
+    "Subsidy_x_concern_Yes__1",
+    "Subsidy_x_concern_Yes__2",
+    "Subsidy_x_concern_Yes__3",
+    "Subsidy_x_concern_Yes__4",
+    "Subsidy_x_concern_Yes__5",
+    "City_x_home_charge_Rural__No",
+    "City_x_home_charge_Rural__Yes",
+    "City_x_home_charge_Suburban__No",
+    "City_x_home_charge_Suburban__Yes",
+    "City_x_home_charge_Urban__No",
+    "City_x_home_charge_Urban__Yes",
+    "City_x_car_type_Rural__Hatchback",
+    "City_x_car_type_Rural__SUV",
+    "City_x_car_type_Rural__Sedan",
+    "City_x_car_type_Rural__Truck",
+    "City_x_car_type_Suburban__Hatchback",
+    "City_x_car_type_Suburban__SUV",
+    "City_x_car_type_Suburban__Sedan",
+    "City_x_car_type_Suburban__Truck",
+    "City_x_car_type_Urban__Hatchback",
+    "City_x_car_type_Urban__SUV",
+    "City_x_car_type_Urban__Sedan",
+    "City_x_car_type_Urban__Truck"
+   ],
+   "raw_onehot": [
+    "Gender_Female",
+    "Gender_Male",
+    "Gender_Other",
+    "City_Type_Rural",
+    "City_Type_Suburban",
+    "City_Type_Urban",
+    "Current_Car_Type_Hatchback",
+    "Current_Car_Type_SUV",
+    "Current_Car_Type_Sedan",
+    "Current_Car_Type_Truck",
+    "Home_Charging_Possible_No",
+    "Home_Charging_Possible_Yes",
+    "Subsidy_Available_No",
+    "Subsidy_Available_Yes",
+    "Range_Anxiety_Level_High",
+    "Range_Anxiety_Level_Low",
+    "Range_Anxiety_Level_Medium"
+   ]
+  },
+  "te_specs": [
+   [
+    "income_exact",
+    [
+     "Annual_Income_USD"
+    ],
+    80,
+    true
+   ],
+   [
+    "commute_exact",
+    [
+     "Daily_Commute_km"
+    ],
+    150,
+    true
+   ],
+   [
+    "income_subsidy_concern",
+    [
+     "Annual_Income_USD",
+     "Subsidy_Available",
+     "Environmental_Concern_Level"
+    ],
+    100,
+    true
+   ],
+   [
+    "commute_anxiety",
+    [
+     "Daily_Commute_km",
+     "Range_Anxiety_Level"
+    ],
+    150,
+    true
+   ],
+   [
+    "subsidy_concern_anxiety",
+    [
+     "Subsidy_Available",
+     "Environmental_Concern_Level",
+     "Range_Anxiety_Level"
+    ],
+    500,
+    false
+   ],
+   [
+    "city_home",
+    [
+     "City_Type",
+     "Home_Charging_Possible"
+    ],
+    500,
+    false
+   ],
+   [
+    "charger_pair",
+    [
+     "Charging_Stations_Near_Home",
+     "Charging_Stations_Near_Work"
+    ],
+    250,
+    false
+   ],
+   [
+    "age_gender",
+    [
+     "Age",
+     "Gender"
+    ],
+    250,
+    false
+   ]
+  ],
+  "data_sha256": {
+   "train": "eae9eaa4e6378df405e755f853771d7e26d212bd93258349fc797b771021946a",
+   "test": "539263f6caabc40afd5e2f0bc0ab16b10a2d1177c565fc71b866f0181d836b34"
+  },
+  "snapshot_sha256": "345e44f01086626f36ffda2e97abfdc3f4a602f2c6dddb1547768fc367c60378",
+  "notebook_code_sha256": "a588dbd1b156755872ba3f39f3de7384616fcfb239661163b38aed6d6c33b092"
+ }
+}

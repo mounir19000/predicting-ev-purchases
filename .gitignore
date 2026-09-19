@@ -30,3 +30,27 @@ Thumbs.db
 .ipynb_checkpoints
 
 notesforme.md
+
+# Competition data: download locally from Kaggle.
+/playground-series-s6e9/
+
+# Generated predictions and submissions; retain small metrics/configuration files.
+*_oof_predictions.csv
+*_fold_predictions.csv
+*_test_member_predictions.csv
+submission*.csv
+**/outputs/*/oof_*.csv
+**/outputs/*/test_predictions.csv
+
+# Training state and local archives of executed notebooks.
+**/checkpoints/
+**/models/
+**/catboost_info/
+**/outputs/*/source.ipynb
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.ubj
+*.npz
+*.tmp
