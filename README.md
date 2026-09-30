@@ -35,12 +35,6 @@ Download and extract `train.csv`, `test.csv`, and `sample_submission.csv` from t
 
 Open the selected notebook in that environment. Model notebooks resolve paths from the repository root or their own folder and write results into their model folder. Open `EDA.ipynb` from the repository root. Running a training notebook starts its configured experiments; the challenger trains 20 models if no matching checkpoints exist. Notebooks do not submit to Kaggle automatically.
 
-## What belongs in Git
-
-Commit notebooks, frozen configurations, best parameters, and small CSV/JSON result summaries. Training notebook outputs are cleared; inspect the saved metrics for completed-run results. The EDA retains its plots.
-
-Datasets, row-level predictions, submission CSVs, fitted models, checkpoints, Optuna databases, and CatBoost logs stay on disk and are ignored. Existing files were preserved during cleanup, but a fresh clone needs data downloads and training or separately backed-up artifacts. Git history still contains artifacts from earlier commits; this cleanup does not rewrite history or reduce the existing `.git` directory.
-
 ## Current submission
 
 The existing local file is:
